@@ -4,7 +4,7 @@ import { Tooltip as ReactTooltip } from 'react-tooltip'
 
 const Card = (props)=> {
 
-   const favs = JSON.parse(localStorage.getItem('odontologosFavs'));
+   const favs = JSON.parse(localStorage.getItem('odontologosFavs')|| '[]');
    const isFavorite = favs.some((fav) => fav.id === props.user.id);
    const tooltipText = isFavorite ? 'Quitar de favoritos' : 'Agregar a favoritos';
 
